@@ -1,0 +1,74 @@
+{
+    "app": {
+        "name": "B2B Marketplace",
+        "tagline": "Fashion Manufacturing Platform in Egypt"
+    },
+    "splash": {
+        "tagline": "Connect your brand with the best factories"
+    },
+    "onboarding": {
+        "title_1": "Discover Factories",
+        "desc_1": "Browse hundreds of fashion manufacturing factories across Egypt",
+        "title_2": "Connect Directly",
+        "desc_2": "Communicate with factories directly and discuss manufacturing details easily",
+        "title_3": "Start Production",
+        "desc_3": "Send manufacturing orders and track production stages step by step",
+        "next": "Next",
+        "skip": "Skip",
+        "get_started": "Get Started"
+    },
+    "role_selection": {
+        "title": "Choose your account type",
+        "subtitle": "You can change this later",
+        "brand": "Brand",
+        "brand_desc": "I'm looking for factories to manufacture my products",
+        "factory": "Factory",
+        "factory_desc": "I want to receive manufacturing orders",
+        "continue_btn": "Continue"
+    },
+    "auth": {
+        "login": {
+            "title": "Welcome Back",
+            "subtitle": "Sign in to your account",
+            "email_label": "Email",
+            "email_hint": "Enter your email",
+            "password_label": "Password",
+            "password_hint": "Enter your password",
+            "button": "Sign In",
+            "no_account": "Don't have an account?",
+            "sign_up_link": "Sign Up"
+        },
+        "signup": {
+            "title": "Create Account",
+            "subtitle": "Register as {role}",
+            "name_label": "Full Name",
+            "name_hint": "Enter your full name",
+            "email_label": "Email",
+            "email_hint": "Enter your email",
+            "password_label": "Password",
+            "password_hint": "At least 6 characters",
+            "button": "Sign Up",
+            "has_account": "Already have an account?",
+            "login_link": "Sign In"
+        },
+        "errors": {
+            "email_required": "Email is required",
+            "email_invalid": "Please enter a valid email",
+            "password_required": "Password is required",
+            "password_short": "Password must be at least 6 characters",
+            "name_required": "Full name is required"
+        }
+    },
+    "brand_home": {
+        "title": "Brand Home",
+        "sign_out": "Sign Out"
+    },
+    "factory_home": {
+        "title": "Factory Home",
+        "sign_out": "Sign Out"
+    },
+    "admin_dashboard": {
+        "title": "Admin Dashboard",
+        "sign_out": "Sign Out"
+    }
+}
