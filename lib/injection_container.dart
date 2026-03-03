@@ -58,6 +58,19 @@ import 'features/factory_dashboard/presentation/bloc/submit_quote_cubit.dart';
 import 'features/factory_dashboard/presentation/bloc/chat_cubit.dart';
 import 'features/factory_dashboard/presentation/bloc/factory_profile_cubit.dart';
 
+// Phase 5 - PDF Export Imports
+import 'core/services/pdf_service.dart';
+import 'features/pdf_export/presentation/bloc/pdf_export_cubit.dart';
+
+// Phase 5 - Notification Imports
+import 'core/services/notification_service.dart';
+import 'features/notifications/data/datasources/notification_remote_datasource.dart';
+import 'features/notifications/presentation/bloc/notification_cubit.dart';
+
+// Phase 5 - Admin Dashboard Imports
+import 'features/admin/data/datasources/admin_remote_datasource.dart';
+import 'features/admin/presentation/bloc/admin_dashboard_cubit.dart';
+
 /// Global service locator instance.
 final GetIt sl = GetIt.instance;
 
@@ -208,6 +221,28 @@ Future<void> initDependencies() async {
       updateFactoryProfileUseCase: sl<UpdateFactoryProfileUseCase>(),
       repository: sl<FactoryProfileRepository>(),
     ),
+  );
+
+  // ── Phase 5: PDF Service ──
+  sl.registerLazySingleton(() => PdfService());
+  sl.registerFactory(() => PdfExportCubit(pdfService: sl<PdfService>()));
+
+  // ── Phase 5: Notification Service ──
+  sl.registerLazySingleton(() => NotificationService(sl<SupabaseClient>()));
+  sl.registerLazySingleton(
+    () => NotificationRemoteDataSource(sl<SupabaseClient>()),
+  );
+  sl.registerFactory(
+    () => NotificationCubit(
+      dataSource: sl<NotificationRemoteDataSource>(),
+      supabase: sl<SupabaseClient>(),
+    ),
+  );
+
+  // ── Phase 5: Admin Dashboard ──
+  sl.registerLazySingleton(() => AdminRemoteDataSource(sl<SupabaseClient>()));
+  sl.registerFactory(
+    () => AdminDashboardCubit(dataSource: sl<AdminRemoteDataSource>()),
   );
 
   // ── Router ──

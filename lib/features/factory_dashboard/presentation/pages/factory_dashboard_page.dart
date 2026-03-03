@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../bloc/factory_dashboard_cubit.dart';
 import '../bloc/factory_dashboard_state.dart';
+import '../../../notifications/presentation/widgets/notification_badge.dart';
 
 class FactoryDashboardPage extends StatefulWidget {
   const FactoryDashboardPage({super.key});
@@ -29,6 +30,7 @@ class _FactoryDashboardPageState extends State<FactoryDashboardPage> {
       appBar: AppBar(
         title: Text('factory.dashboard'.tr()),
         actions: [
+          const NotificationBadge(),
           IconButton(
             icon: const Icon(Icons.person_outline),
             onPressed: () => context.pushNamed(AppRoutes.myProfile),

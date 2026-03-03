@@ -9,6 +9,8 @@ import '../../../auth/presentation/bloc/auth_cubit.dart';
 import '../bloc/factory_search_cubit.dart';
 import '../bloc/factory_search_state.dart';
 import '../widgets/factory_card.dart';
+import '../../../notifications/presentation/bloc/notification_cubit.dart';
+import '../../../notifications/presentation/widgets/notification_badge.dart';
 
 class BrandHomePage extends StatefulWidget {
   const BrandHomePage({super.key});
@@ -28,12 +30,18 @@ class _BrandHomePageState extends State<BrandHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => sl<FactorySearchCubit>()..loadHomeData(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => sl<FactorySearchCubit>()..loadHomeData()),
+        BlocProvider(
+          create: (_) => sl<NotificationCubit>()..loadNotifications(),
+        ),
+      ],
       child: Scaffold(
         appBar: AppBar(
           title: Text('brand.home.title'.tr()),
           actions: [
+            const NotificationBadge(),
             IconButton(
               icon: const Icon(Icons.logout),
               onPressed: () {
