@@ -38,4 +38,11 @@ class AppColors {
   static const Color divider = Color(0xFFBDBDBD);
   static const Color disabled = Color(0xFFE0E0E0);
   static const Color shadow = Color(0x1A000000);
+
+  // ── Aliases ──
+  static const Color surface = surfaceLight;
+  static const Color background = backgroundLight;
+  static const Color textPrimary = textPrimaryLight;
+  static const Color textSecondary = textSecondaryLight;
+  static const Color textTertiary = textSecondaryLight;
 }

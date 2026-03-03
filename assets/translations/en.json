@@ -51,12 +51,58 @@
             "has_account": "Already have an account?",
             "login_link": "Sign In"
         },
+        "error": {
+            "no_internet": "No internet connection. Please try again.",
+            "unauthorized": "You are not authorized to perform this action.",
+            "unknown": "An unknown error occurred. Please try again later.",
+            "server_error": "Server error. Please try again later."
+        },
         "errors": {
             "email_required": "Email is required",
             "email_invalid": "Please enter a valid email",
             "password_required": "Password is required",
             "password_short": "Password must be at least 6 characters",
             "name_required": "Full name is required"
+        }
+    },
+    "brand": {
+        "home": {
+            "title": "Brand Dashboard",
+            "search_hint": "Search factories...",
+            "categories": "Categories",
+            "top_factories": "Top Rated Factories",
+            "view_all": "View All",
+            "my_rfqs": "My RFQs"
+        },
+        "search": {
+            "title": "Search Factories",
+            "search_hint": "Search factories by name or location...",
+            "no_results": "No factories found",
+            "try_different": "Try adjusting your filters or search query"
+        },
+        "profile": {
+            "title": "Factory Profile",
+            "specialization": "Specialization",
+            "moq": "MOQ",
+            "lead_time": "Lead Time",
+            "photos": "Photos",
+            "request_rfq": "Request RFQ"
+        },
+        "rfq_form": {
+            "title": "Request for Quote",
+            "rfq_title": "RFQ Title",
+            "description": "Description",
+            "quantity": "Quantity",
+            "photos": "Photos",
+            "add_photo": "Add Photo",
+            "submit": "Submit RFQ",
+            "success": "RFQ submitted successfully!",
+            "required": "This field is required",
+            "invalid_quantity": "Please enter a valid quantity greater than 0"
+        },
+        "my_rfqs": {
+            "title": "My RFQs",
+            "no_rfqs": "You haven't submitted any RFQs yet."
         }
     },
     "brand_home": {
